@@ -51,8 +51,8 @@ def main():
     resp=client2.get("https://tls.peet.ws/api/all",headers=headers,impersonate="chrome146")
     header2=find_header(resp)
     
-    # print("GET with curl_cffi_header >",json.dumps(header1, indent=4))
-    # print("GET without curl_cffi_header >",json.dumps(header2, indent=4))
+    print("GET with curl_cffi_header >",json.dumps(header1, indent=4))
+    print("GET without curl_cffi_header >",json.dumps(header2, indent=4))
 
     # POST test
     headers={
