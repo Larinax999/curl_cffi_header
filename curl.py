@@ -32,7 +32,7 @@ class curl_cffi_header:
             cookie_key = next((k for k in kwargs["headers"].keys() if k.lower() == "cookie"), None)
 
             # HTTP/2: split cookies into separate headers
-            if kwargs["headers"].get("Host") == None and not hasattr(self.client,"force_http1"): 
+            if kwargs["headers"].get("Host") == None: 
                 headers_list = []
                 for k, v in kwargs["headers"].items():
                     if k == cookie_key:
